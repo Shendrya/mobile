@@ -4,127 +4,49 @@
     <meta charset="utf-8">
     <title>dahub</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="app">
-
         <main>
-            <form class="form-exchange" action="index.html" method="post">
-                <div class="form-control">
-                    <label for="currency">Валюта</label>
-                    <div class="select-wrapper">
-                        <select name="currency" class="select-currency">
-                            <option value="USDT">USDT</option>
-                            <option value="BTC">BTC</option>
-                            <option value="ETH" selected>ETH</option>
-                            <option value="BTC">BTC</option>
-                        </select>
-                        <svg class="select-angle" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M18.7 9.7L12.7 15.7C12.5 15.9 12.3 16 12 16C11.7 16 11.5 15.9 11.3 15.7L5.3 9.7C4.9 9.3 4.9 8.7 5.3 8.3C5.7 7.9 6.3 7.9 6.7 8.3L12 13.6L17.3 8.3C17.7 7.9 18.3 7.9 18.7 8.3C19.1 8.7 19.1 9.3 18.7 9.7Z" fill="black"/>
-                            <mask id="angle-down" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="5" y="8" width="14" height="8">
-                            <path d="M18.7 9.7L12.7 15.7C12.5 15.9 12.3 16 12 16C11.7 16 11.5 15.9 11.3 15.7L5.3 9.7C4.9 9.3 4.9 8.7 5.3 8.3C5.7 7.9 6.3 7.9 6.7 8.3L12 13.6L17.3 8.3C17.7 7.9 18.3 7.9 18.7 8.3C19.1 8.7 19.1 9.3 18.7 9.7Z" fill="white"/>
-                            </mask>
-                            <g mask="url(#angle-down)">
-                            <rect width="24" height="24" fill="#0D1F3C"/>
-                            </g>
-                        </svg>
-                    </div>
-                </div>
-                <div class="form-control">
-                    <label for="network">Платежная сеть</label>
-                    <div class="select-wrapper">
-                        <select name="network" class="select-currency">
-                            <option value="ERC202" selected>ERC202</option>
-                            <option value="-">-</option>
-                            <option value="-">-</option>
-                            <option value="-">-</option>
-                        </select>
-                        <svg class="select-angle" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M18.7 9.7L12.7 15.7C12.5 15.9 12.3 16 12 16C11.7 16 11.5 15.9 11.3 15.7L5.3 9.7C4.9 9.3 4.9 8.7 5.3 8.3C5.7 7.9 6.3 7.9 6.7 8.3L12 13.6L17.3 8.3C17.7 7.9 18.3 7.9 18.7 8.3C19.1 8.7 19.1 9.3 18.7 9.7Z" fill="black"/>
-                            <mask id="angle-down" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="5" y="8" width="14" height="8">
-                            <path d="M18.7 9.7L12.7 15.7C12.5 15.9 12.3 16 12 16C11.7 16 11.5 15.9 11.3 15.7L5.3 9.7C4.9 9.3 4.9 8.7 5.3 8.3C5.7 7.9 6.3 7.9 6.7 8.3L12 13.6L17.3 8.3C17.7 7.9 18.3 7.9 18.7 8.3C19.1 8.7 19.1 9.3 18.7 9.7Z" fill="white"/>
-                            </mask>
-                            <g mask="url(#angle-down)">
-                            <rect width="24" height="24" fill="#0D1F3C"/>
-                            </g>
-                        </svg>
-                    </div>
-                </div>
-                <div class="form-control amount-wrapper">
-                    <label for="amount">Сумма</label>
-                    <div class="select-wrapper">
-                        <input type="number" name="amount" class="input-amount" placeholder="0" min="0" />
-                    </div>
-                </div>
-                <div class="form-control text-center">
-                    <svg  width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#select-angle)">
-                        <path d="M15.455 19.0905L15.455 3.10336L18.4486 6.09688C18.8035 6.45191 19.3792 6.45191 19.7342 6.09688C20.0892 5.74191 20.0892 5.16627 19.7342 4.81124L15.1888 0.265784C14.8338 -0.0892461 14.2582 -0.0892461 13.9031 0.265784L9.35768 4.81124C9.18016 4.98875 9.09137 5.22142 9.09137 5.45409C9.09137 5.68675 9.18016 5.91942 9.35768 6.09688C9.71265 6.45191 10.2883 6.45191 10.6433 6.09688L13.6368 3.10336L13.6368 19.0905C13.6368 19.5925 14.0439 19.9995 14.5459 19.9995C15.048 19.9995 15.455 19.5925 15.455 19.0905Z" fill="#78839C"/>
-                        <path d="M10.6428 15.1882C10.9978 14.8333 10.9978 14.2576 10.6428 13.9026C10.2879 13.5476 9.71222 13.5476 9.35719 13.9026L6.36361 16.8962L6.36361 0.909091C6.36361 0.40703 5.95658 -2.16479e-07 5.45452 -2.38425e-07C4.95246 -2.60371e-07 4.54543 0.40703 4.54543 0.909091L4.54543 16.8962L1.55185 13.9027C1.19688 13.5476 0.621247 13.5476 0.266216 13.9027C0.0887607 14.0801 -2.73285e-05 14.3128 -2.73387e-05 14.5455C-2.73489e-05 14.7781 0.0887616 15.0108 0.266277 15.1882L4.81173 19.7337C5.1667 20.0887 5.74234 20.0887 6.09737 19.7337L10.6428 15.1882Z" fill="#78839C"/>
+            <div class="text-block">
+                <p><small>Заявка #</small></p>
+                <p>122334</p>
+            </div>
+            <div class="text-block">
+                <p><small>На обмен</small></p>
+                <div class="d-flex">
+                    <p>2 4389 USDT</p>
+                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0)">
+                        <path d="M19.0905 4.54499H3.10336L6.09688 1.55142C6.45191 1.19645 6.45191 0.620814 6.09688 0.265784C5.74191 -0.0892458 5.16627 -0.0892458 4.81124 0.265784L0.265784 4.81124C-0.0892458 5.1662 -0.0892458 5.74184 0.265784 6.09687L4.81124 10.6423C4.98875 10.8198 5.22142 10.9086 5.45409 10.9086C5.68675 10.9086 5.91942 10.8198 6.09688 10.6423C6.45191 10.2874 6.45191 9.71172 6.09688 9.35669L3.10336 6.36317H19.0905C19.5925 6.36317 19.9995 5.95614 19.9995 5.45408C19.9995 4.95202 19.5925 4.54499 19.0905 4.54499Z" fill="#78839C"/>
+                        <path d="M15.1882 9.35711C14.8333 9.00214 14.2576 9.00214 13.9026 9.35711C13.5476 9.71208 13.5476 10.2877 13.9026 10.6427L16.8962 13.6363H0.909091C0.40703 13.6363 0 14.0434 0 14.5454C0 15.0475 0.40703 15.4545 0.909091 15.4545H16.8962L13.9027 18.4481C13.5476 18.8031 13.5476 19.3787 13.9027 19.7337C14.0801 19.9112 14.3128 20 14.5455 20C14.7781 20 15.0108 19.9112 15.1882 19.7337L19.7337 15.1882C20.0887 14.8332 20.0887 14.2576 19.7337 13.9026L15.1882 9.35711Z" fill="#78839C"/>
                         </g>
                         <defs>
-                        <clipPath id="select-angle">
-                        <rect width="20" height="20" fill="white" transform="translate(20) rotate(90)"/>
+                        <clipPath id="clip0">
+                        <rect width="20" height="20" fill="white"/>
                         </clipPath>
                         </defs>
                     </svg>
+                    <p>24 424 RUB</p>
                 </div>
-                <div class="form-control">
-                    <label for="currency">Валюта</label>
-                    <div class="select-wrapper">
-                        <select name="currency" class="select-currency">
-                            <option value="RUB" selected>RUB</option>
-                            <option value="EUR">EUR</option>
-                            <option value="USD">USD</option>
-                        </select>
-                        <svg class="select-angle" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M18.7 9.7L12.7 15.7C12.5 15.9 12.3 16 12 16C11.7 16 11.5 15.9 11.3 15.7L5.3 9.7C4.9 9.3 4.9 8.7 5.3 8.3C5.7 7.9 6.3 7.9 6.7 8.3L12 13.6L17.3 8.3C17.7 7.9 18.3 7.9 18.7 8.3C19.1 8.7 19.1 9.3 18.7 9.7Z" fill="black"/>
-                            <mask id="angle-down" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="5" y="8" width="14" height="8">
-                            <path d="M18.7 9.7L12.7 15.7C12.5 15.9 12.3 16 12 16C11.7 16 11.5 15.9 11.3 15.7L5.3 9.7C4.9 9.3 4.9 8.7 5.3 8.3C5.7 7.9 6.3 7.9 6.7 8.3L12 13.6L17.3 8.3C17.7 7.9 18.3 7.9 18.7 8.3C19.1 8.7 19.1 9.3 18.7 9.7Z" fill="white"/>
-                            </mask>
-                            <g mask="url(#angle-down)">
-                            <rect width="24" height="24" fill="#0D1F3C"/>
-                            </g>
-                        </svg>
-                    </div>
-                </div>
-                <div class="form-control amount-wrapper">
-                    <label for="sum">Сумма к получению*</label>
-                    <div class="select-wrapper">
-                        <input type="number" name="sum" class="input-amount" placeholder="0" min="0" />
-                    </div>
-                    <p class="textnote">*по лучшему курсу, за вычетом комиссии</p>
-                </div>
-                <div class="form-control">
-                    <label for="payment">Платёжная система</label>
-                    <div class="select-wrapper">
-                        <select name="payment" class="select-currency">
-                            <option value="RUB" selected>Тинькофф</option>
-                            <option value="EUR">EUR</option>
-                            <option value="USD">USD</option>
-                        </select>
-                        <svg class="select-angle" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M18.7 9.7L12.7 15.7C12.5 15.9 12.3 16 12 16C11.7 16 11.5 15.9 11.3 15.7L5.3 9.7C4.9 9.3 4.9 8.7 5.3 8.3C5.7 7.9 6.3 7.9 6.7 8.3L12 13.6L17.3 8.3C17.7 7.9 18.3 7.9 18.7 8.3C19.1 8.7 19.1 9.3 18.7 9.7Z" fill="black"/>
-                            <mask id="angle-down" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="5" y="8" width="14" height="8">
-                            <path d="M18.7 9.7L12.7 15.7C12.5 15.9 12.3 16 12 16C11.7 16 11.5 15.9 11.3 15.7L5.3 9.7C4.9 9.3 4.9 8.7 5.3 8.3C5.7 7.9 6.3 7.9 6.7 8.3L12 13.6L17.3 8.3C17.7 7.9 18.3 7.9 18.7 8.3C19.1 8.7 19.1 9.3 18.7 9.7Z" fill="white"/>
-                            </mask>
-                            <g mask="url(#angle-down)">
-                            <rect width="24" height="24" fill="#0D1F3C"/>
-                            </g>
-                        </svg>
-                    </div>
-                </div>
-                <div class="form-control free-amount">
-                    <label for="card">Номер карты для зачисления</label>
-                    <div class="select-wrapper">
-                        <input type="number" name="card" class="input-amount"/>
-                    </div>
-                </div>
-            </form>
+            </div>
+            <div class="text-block">
+                <p><small>Оставшееся время:</small></p>
+                <p>4:59 минут</p>
+            </div>
+            <div class="text-block text-blue">
+                <p><small>Status</small></p>
+                <p>Заявка принята шлюзом.</p>
+            </div>
+            <div class="text-block">
+                <p>Переведите 2 4389 USDT по адресу:</p>
+            </div>
         </main>
         <footer class="footer">
-            <a class="button button-blue">Далее</a>
+            <a class="button button-blue">Переведено, далее</a>
+            <a class="button button-red">Отменить заявку</a>
         </footer>
     </div>
 </body>
