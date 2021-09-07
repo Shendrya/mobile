@@ -83,6 +83,10 @@ input[type='number']::-webkit-inner-spin-button {
     padding-bottom: 30px;
     box-sizing: content-box;
 }
+.menu-swipe {
+    width:375px;
+    margin:35px auto;
+}
 .amount-wrapper label {
     margin-bottom: 0;
     line-height: 1;
@@ -119,6 +123,16 @@ a.button-blue {
 a.button-red {
     background: #DF5060;
     color: #FFFFFF!important;
+}
+a.button-clear {
+    background: none;
+    color: #DF5060!important;
+}
+a.button-border {
+    border: 2px solid #347AF0;
+    border-radius: 23px;
+    background: none;
+    color: #347AF0!important;
 }
 
 .form-exchange .select-currency {
@@ -162,4 +176,77 @@ footer {
 }
 .text-blue p {
         color: #347AF0
+}
+.line-block {
+    padding: 0px 30px 0px;
+}
+.nav-link {
+    padding: 0;
+}
+.menu-swipe div.user-info {
+    padding: 0px 131px 35px 0px;
+}
+.menu-swipe div.user-info h2 {
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 24px;
+    color: #0D1F3C;
+}
+.menu-swipe div.user-info p.user-id {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 24px;
+    color: #347AF0;
+}
+.menu-swipe div.user-info div.verification-info p {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 24px;
+    opacity: 0.9;
+    background: -webkit-linear-gradient(#85F362, #02AAFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+.menu-swipe div.user-info div.verification-info p svg {
+    margin-right: 9px;
+}
+
+.menu-swipe ul.nav  {
+
+}
+.menu-swipe ul.nav li {
+    margin: 17px 0;
+}
+.menu-swipe ul.nav li a {
+    font-weight: normal;
+    font-size: 19px;
+    line-height: 24px;
+    color: #0D1F3C;
+    display: flex;
+    align-items: center;
+}
+.menu-swipe ul.nav li a svg {
+    margin-right: 13px;
+}
+div.version-pro {
+    height: 50px;
+    margin: 17px -25px;
+    background: #F4F4F4;
+    display: flex;
+}
+div.version-pro h2 {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 24px;
+    opacity: 0.9;
+    color: #0D1F3C;
+    display: flex;
+    align-items: center;
+    margin: 25px;
+}
+div.version-pro svg {
+    margin-left: 172px;
 }
